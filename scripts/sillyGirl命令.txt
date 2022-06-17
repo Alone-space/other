@@ -1,0 +1,158 @@
+2.青龙常用交互命令
+拉去脚本
+ql raw 脚本地址
+
+查询COOKIE状态
+ql cookie status
+
+指定CK运行脚本
+ql task 任务文件名 desi JD_COOKIE 指定的CK编号(如1 1-2 等等)
+
+CK优先级
+jd exchange ？ ？
+
+CK备注
+jd remark ？ ？
+
+[修改QQ、Cookie绑定关系]
+删除Cookie对应QQ号关系[只需要改pt_pin为你要改的pin]
+delete pinQQ pt_pin
+
+绑定Cookie对应QQ关系 [改pt_pin为你要改的pin qq号为需要绑定QQ号]
+set pinQQ pt_pin qq号
+
+解除指定账号关联的一切账号
+jd unbind im 账号
+
+青龙关闭自动隐藏任务命令
+set qinglong autoCronHideDuplicate false
+默认开启。
+
+^ql\s+crons$
+ql crons #获取所有青龙任务
+
+^ql\s+cron\s+status\s+(\S+)$
+ql cron starts 任务名 #查看该任务状态
+
+^ql\s+cron\s+run\s+(\S+)$
+ql cron run 任务名 #运行该任务
+
+^ql\s+cron\s+stop\s+(\S+)$
+ql cron stop 任务名 #停止该任务
+
+^ql\s+cron\s+enable\s+(\S+)$
+ql cron enable 任务名 #启用该任务
+
+^ql\s+cron\s+disable\s+(\S+)$
+ql cron disable 任务名 #禁用该任务
+
+^ql\s+cron\s+find\s+(\S+)$
+ql cron find 任务名 #查找该任务
+
+^ql\s+cron\s+logs\s+(\S+)$
+ql cron logs 任务名 #查看该任务日志
+
+^ql\s+update$
+ql update #升级青龙面板
+
+^ql\s+update\s+logs$
+ql update logs #查看青龙面板升级日志
+
+^ql\s+cron\s+hide\s+duplicate$
+ql cron hide duplicate #删除重复任务
+
+ql\s+config$
+ql config #查看青龙配置文件 QQ字数限制所以用不了
+
+^ql\s+envs$
+ql envs #查看青龙已有变量不含CK
+
+^ql\s+env\s+get\s+(\S+)$
+ql env get 变量名 #获取变量信息包含名称/状态和值
+
+^ql\s+env\s+find\s+(\S+)$
+ql env find 变量名 #用于查询是否已设置此变量
+
+^ql\s+env\s+set\s+(\S+)\s+(\S+)$
+ql env set 变量名 变量值 #设置新的变量
+
+^ql\s+env\s+remark\s+(\S+)\s+(\S+)$
+ql env remark 变量名 备注 #设置变量备注
+
+^ql\s+env\s+disable\s+(\S+)$
+ql env disable 变量名 #禁用变量
+
+^ql\s+env\s+enable\s+(\S+)$
+ql env enable 变量名 #启用变量
+
+
+
+
+
+
+修改傻妞端口号
+set sillyGirl port xxxx
+设置QQ
+set qq uid 机器人QQ号
+设置QQ密码
+set qq password 机器人QQ密码
+设置管理员账户支持多个用&连接
+set qq masters 用于管理机器人的QQ号
+设置tg机器人
+set tg token TG机器人的token
+设置tg机器人
+set tg masters TG机器人ID
+sillyGirl telegram bot 代理命令
+set tg url xxxxx
+设置青龙open api id
+set qinglong client_id 青龙应用ID
+设置青龙open api 密码
+set qinglong client_secret 青龙应用secret(密钥)
+设置青龙登录地址
+set qinglong host http://IP:端口号
+例如:set qinglong host http://123.1.2.123:5700
+删除Cookie对应QQ号关系[只需要改pt_pin为你要改的pin]
+delete pinQQ pt_pin
+绑定Cookie对应QQ关系 [改pt_pin为你要改的pin qq号为需要绑定QQ号]
+set pinQQ pt_pin qq号
+傻妞更新命令为 升级
+扩展组件库升级命令为 jd update
+重启傻妞
+ps -A|grep sillyGirl ##显示进程号
+kill -9 xxxxxx ##杀掉进程
+cd sillyGirl && ./sillyGirl 
+按Curl ＋ C
+nohup ./sillyGirl 1>/dev/null 2>&1 & #AMD64
+傻妞青龙任务系列
+^ql\s+crons$
+ql crons #获取所有青龙任务
+
+^ql\s+cron\s+status\s+(\S+)$
+ql cron starts 任务编码 #查看该任务状态
+
+^ql\s+cron\s+run\s+(\S+)$
+ql cron run 任务编码 #运行该任务
+
+^ql\s+cron\s+stop\s+(\S+)$
+ql cron stop 任务编码 #停止该任务
+
+^ql\s+cron\s+enable\s+(\S+)$
+ql cron enable 任务编码 #启用该任务
+
+^ql\s+cron\s+disable\s+(\S+)$
+ql cron disable 任务编码 #禁用该任务
+
+^ql\s+cron\s+find\s+(\S+)$
+ql cron find 任务名 #查找该任务
+
+^ql\s+cron\s+logs\s+(\S+)$
+ql cron logs 任务编码 #查看该任务日志
+
+^ql\s+update$
+ql update #升级青龙面板
+
+^ql\s+update\s+logs$
+ql update logs #查看青龙面板升级日志
+
+^ql\s+cron\s+hide\s+duplicate$
+ql cron hide duplicate #删除重复任务
