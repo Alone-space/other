@@ -30,7 +30,7 @@
         background-position: top !important;
         background-repeat: no-repeat !important;
         background-size: cover !important;
-        background-image: url(背景图片链接) !important;
+        background-image: url(填写背景图片链接) !important;
         font-family: Arial,Helvetica,sans-serif !important;
     }
     
@@ -297,7 +297,7 @@
 window.onload = function(){
 var avatar=document.querySelector(".item img")
 var footer=document.querySelector("div.is-size-7")
-footer.innerHTML="网站底部显示的字"
+footer.innerHTML="填写网站底部显示的文字"
 footer.style.visibility="visible"
 avatar.src="换成自己的链接，gif什么的都行"
 avatar.style.visibility="visible"
